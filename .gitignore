@@ -1,0 +1,8 @@
+*
+!.gitignore
+!.tmux
+!.config
+!.vimrc
+!Makefile
+!scripts
+!k9s
