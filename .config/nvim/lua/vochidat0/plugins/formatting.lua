@@ -10,7 +10,6 @@ return {
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
         typescriptreact = { "prettier" },
-        svelte = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
@@ -20,6 +19,10 @@ return {
         liquid = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        cpp = { "clang_format" },
+        c = { "clang_format" },
+        java = { "google-java-format" },
+        go = { "gofumpt", "goimports-reviser", "golines" },
       },
       format_on_save = {
         lsp_fallback = true,

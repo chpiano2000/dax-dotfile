@@ -22,7 +22,7 @@ opt.cursorline = true
 -- turn on termguicolors for tokyonight colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+opt.background = "light" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
@@ -37,3 +37,9 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+vim.env.TERM = "screen-256color"
+
+-- Fold
+vim.opt.foldmethod = 'indent'
+vim.opt.foldlevel= 99
