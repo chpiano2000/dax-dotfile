@@ -1,9 +1,21 @@
+-- return {
+--   "rose-pine/neovim",
+--   name = "rose-pine",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     vim.cmd("colorscheme rose-pine-dawn")
+--   end,
+-- }
+
 return {
-  "rose-pine/neovim",
-  name = "rose-pine",
+  "sainnhe/gruvbox-material",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme rose-pine-dawn")
+    -- Optionally configure and load the colorscheme
+    -- directly inside the plugin declaration.
+    vim.g.gruvbox_material_enable_italic = true
+    vim.cmd.colorscheme("gruvbox-material")
   end,
 }

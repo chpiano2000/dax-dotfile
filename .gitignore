@@ -1,9 +1,9 @@
 *
 !.config/*
-!.gitignore
 !.tmux
 !.vimrc
 !Makefile
 !scripts
 !k9s
 !.tmux.conf
+!.ideavimrc

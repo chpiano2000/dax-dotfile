@@ -1,21 +1,23 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
--- local brightness = 0.03
-local theme = require("lua/rose_pine").dawn
+local brightness = 0.03
+config.color_scheme = "Gruvbox Material (Gogh)"
 
-config.colors = theme.colors()
-config.window_frame = theme.window_frame()
+-- light theme
+-- local theme = require("lua/rose_pine").dawn
+-- config.colors = theme.colors()
+-- config.window_frame = theme.window_frame()
 
--- config.window_background_image_hsb = {
---     -- Darken the background image by reducing it
---     brightness = brightness,
---     hue = 1.0,
---     saturation = 0.8,
--- }
+config.window_background_image_hsb = {
+	-- Darken the background image by reducing it
+	brightness = brightness,
+	hue = 1.0,
+	saturation = 0.8,
+}
 
 -- window setting
--- config.window_background_opacity = 0.90
--- config.macos_window_background_blur = 85
+config.window_background_opacity = 0.90
+config.macos_window_background_blur = 85
 
 -- config.window_padding = {
 --     left = 0,
