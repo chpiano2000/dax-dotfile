@@ -12,7 +12,6 @@ opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 opt.wrap = false
-
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
@@ -41,6 +40,11 @@ opt.swapfile = false
 vim.env.TERM = "screen-256color"
 
 -- Fold
-vim.opt.foldmethod = "indent"
+vim.opt.signcolumn = "yes"
+vim.opt.foldcolumn = "1"
 vim.opt.foldlevel = 99
-
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+vim.wo.foldmethod = "expr" -- Set foldmethod to expr
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.fillchars = { fold = " ", foldopen = "", foldsep = " ", foldclose = "" }
