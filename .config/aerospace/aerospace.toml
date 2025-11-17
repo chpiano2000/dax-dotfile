@@ -62,7 +62,7 @@ inner.horizontal = 10
 inner.vertical =   10
 outer.left =       10
 outer.bottom =     10
-outer.top =        10
+outer.top =        [{ monitor."built-in" = 10 }, { monitor."dell.*" = 40 }, 10]
 outer.right =      10
 
 # 'main' binding mode declaration
@@ -191,9 +191,9 @@ run = "move-node-to-workspace 8"
 
 [[on-window-detected]]
 if.app-id = 'com.busymac.busycal3'
-run = "move-node-to-workspace c"
+run = "move-node-to-workspace Calendar"
 
 [[on-window-detected]]
 if.app-id = 'com.pdfeditor.pdfeditormac'
-run = "move-node-to-workspace p"
+run = "move-node-to-workspace PDF"
 
