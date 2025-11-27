@@ -13,6 +13,7 @@ return {
         "pyright",
         "eslint",
       },
+      automatic_enable = false,
     },
     dependencies = {
       {
