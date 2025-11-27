@@ -21,6 +21,12 @@ return {
       },
     })
 
+    local lint_ok, lint = pcall(require, "lint")
+    if lint_ok then
+      lint.linters.pylint.cmd = "python"
+      lint.linters.pylint.args = { "-m", "pylint", "-f", "json" }
+    end
+
     vim.lsp.config("*", {
       capabilities = capabilities,
     })
