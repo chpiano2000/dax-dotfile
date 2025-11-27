@@ -112,6 +112,7 @@ alt-shift-equal = 'resize smart +50'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-c = 'workspace Calendar'
 alt-p = 'workspace PDF'
+alt-n = 'workspace Notes'
 alt-0 = 'workspace 0'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -126,6 +127,7 @@ alt-9 = 'workspace 9'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-c = 'move-node-to-workspace Calendar'
 alt-shift-p = 'move-node-to-workspace PDF'
+alt-shift-n = 'move-node-to-workspace Notes'
 alt-shift-0 = 'move-node-to-workspace 0'
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -182,12 +184,13 @@ if.app-id = 'com.tdesktop.Telegram'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = "move-node-to-workspace 7"
-
-[[on-window-detected]]
 if.app-id = 'com.bitwarden.desktop'
 run = "move-node-to-workspace 8"
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = "move-node-to-workspace Notes"
+
 
 [[on-window-detected]]
 if.app-id = 'com.busymac.busycal3'
