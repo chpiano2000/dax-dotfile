@@ -44,6 +44,7 @@ return {
         "c",
         "helm",
         "gotmpl",
+        "hcl",
       },
       incremental_selection = {
         enable = true,
@@ -55,5 +56,9 @@ return {
         },
       },
     })
+
+    vim.treesitter.language.register("hcl", "terraform")
+    vim.treesitter.language.register("hcl", "tf")
+    vim.treesitter.language.register("hcl", "tfvars")
   end,
 }
