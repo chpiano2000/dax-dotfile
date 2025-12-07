@@ -23,6 +23,13 @@ return {
         c = { "clang_format" },
         java = { "google-java-format" },
         go = { "gofumpt", "goimports-reviser", "golines" },
+        --terraform
+        terraform = { "terraform_fmt" },
+        tf = { "terraform_fmt" },
+        -- Ansible
+        ["yaml.ansible"] = { "prettier" },
+        -- Helm
+        helm = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,

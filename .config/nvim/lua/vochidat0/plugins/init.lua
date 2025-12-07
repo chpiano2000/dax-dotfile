@@ -1,10 +1,15 @@
 vim.filetype.add({
   extension = {
     helm = "helm",
+    tf = "terraform",
+    tfvars = "terraform",
+    tfstate = "json",
   },
   filename = {
     ["Chart.yaml"] = "yaml",
     ["values.yaml"] = "yaml",
+    [".terraform.lock.hcl"] = "hcl",
+    ["terraform.tfvars"] = "terraform",
   },
   pattern = {
     -- helm pattern
@@ -28,6 +33,12 @@ vim.filetype.add({
     [".*/inventory/.*%.ya?ml"] = "yaml.ansible",
     [".*/host_vars/.*%.ya?ml"] = "yaml.ansible",
     [".*/group_vars/.*%.ya?ml"] = "yaml.ansible",
+
+    -- TERRAFORM PATTERNS
+    ["%.tf"] = "terraform",
+    ["%.tfvars"] = "terraform",
+    ["%.tfstate"] = "json",
+    ["%.tfstate%.backup"] = "json",
   },
 })
 
