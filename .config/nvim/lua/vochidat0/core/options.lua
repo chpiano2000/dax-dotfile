@@ -17,6 +17,7 @@ opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
 opt.cursorline = true
+opt.scrolloff = 999
 
 -- turn on termguicolors for tokyonight colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
@@ -48,3 +49,5 @@ vim.opt.foldenable = true
 vim.wo.foldmethod = "expr" -- Set foldmethod to expr
 vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.fillchars = { fold = " ", foldopen = "", foldsep = " ", foldclose = "" }
+
+vim.opt.conceallevel = 1
